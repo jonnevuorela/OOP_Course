@@ -1,0 +1,14 @@
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_1_Jonne_Vuorela
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.deps.json
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.runtimeconfig.json
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.dll
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.pdb
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.AssemblyInfoInputs.cache
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.AssemblyInfo.cs
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.csproj.CoreCompileInputs.cache
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.dll
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/refint/Harjoitus_1_Jonne_Vuorela.dll
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.pdb
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_1_Jonne_Vuorela.genruntimeconfig.cache
+/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/Debug/net8.0/ref/Harjoitus_1_Jonne_Vuorela.dll
