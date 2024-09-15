@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonne/Harjoitus_1_Jonne_Vuorela/Harjoitus_1_Jonne_Vuorela.csproj",
+      "projectUniqueName": "/Users/jonne/repos/OOP_Course/Harjoitus_1_Jonne_Vuorela/Harjoitus_1_Jonne_Vuorela.csproj",
       "projectName": "Harjoitus_1_Jonne_Vuorela",
-      "projectPath": "/Users/jonne/Harjoitus_1_Jonne_Vuorela/Harjoitus_1_Jonne_Vuorela.csproj",
+      "projectPath": "/Users/jonne/repos/OOP_Course/Harjoitus_1_Jonne_Vuorela/Harjoitus_1_Jonne_Vuorela.csproj",
       "packagesPath": "/Users/jonne/.nuget/packages/",
-      "outputPath": "/Users/jonne/Harjoitus_1_Jonne_Vuorela/obj/",
+      "outputPath": "/Users/jonne/repos/OOP_Course/Harjoitus_1_Jonne_Vuorela/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonne/.nuget/NuGet/NuGet.Config"
