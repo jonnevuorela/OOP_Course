@@ -13,7 +13,8 @@ class Program
         string inputString;
 
         //2. stringin muunto 1
-        Console.WriteLine("2. Anna muunnettava sana, joka muutetaan isoiksi kirjaimiski.");
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n2. Anna muunnettava sana, joka muutetaan isoiksi kirjaimiski.");
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -29,7 +30,8 @@ class Program
         }
 
         //3. stringin muunto 2
-        Console.WriteLine("3. Anna muunnettava sana, joka muutetaan pieniksi kirjaimiksi");
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n3. Anna muunnettava sana, joka muutetaan pieniksi kirjaimiksi");
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -45,7 +47,8 @@ class Program
         }
 
         //4. String to int muunnos
-        Console.WriteLine("4. Syötä luku josta vähennetään 10: ");
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n4. Syötä luku josta vähennetään 10: ");
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -64,7 +67,8 @@ class Program
         }
 
         //5. ikä vuoden lasku
-        Console.WriteLine("5. Syötä syntymävuosi: ");
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n5. Syötä syntymävuosi: ");
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -82,7 +86,10 @@ class Program
         }
 
         //6. Lausen string split array
-        Console.WriteLine("6. Kirjoita lause: ");
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n6. Kirjoita lause: ");
+        bool valid;
+        int wordCount;
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -92,18 +99,139 @@ class Program
             }
             else
             {
-                if (SplitSentence(out inputString, inputString))//vastaanottaa metodista tyhjän stringin, mikäli input on huono
+                if (SplitSentence(out wordCount, out valid, out inputString, inputString))
+                //wordCount antaa vastauksen kohtaan 7.
+                //valid muuttuja oikeuttaa etenemisen kohtaan 7. ja 8.
+                //vastaanottaa metodista tyhjän stringin(inputString), mikäli input on huono
                 {
+                    break;
+                }
+            }
+        }
+        //jos 6. kohdan input on käypä
+        if (valid)
+        {
+            ///7. Tulosta lauseen sanojen määrä
+            Console.WriteLine("\n------------------------------------");
+            Console.WriteLine("\n7. Lauseessa on " + CountWords(wordCount) + " sanaa.");
+            //tätä kohdassa 7. ei taidettua hakea, mutta tässä tulee ihan siisti data pipeline
+
+            //8. Muuntaa lauseen sanojen ekat kirjaimet
+            Console.WriteLine("\n------------------------------------");
+            Console.WriteLine("\n8. lauseen sanojen alkukirjaimet isoiksi");
+            AlterSentence(inputString);
+        }
+
+        //9. Kysy käyttäjältä lukua, kunnes syötetään luku 10
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n9. Syötä oikea luku jatkaaksesi: ");
+        while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
+        {
+            inputString = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(inputString)) //whitespace handling
+            {
+                Console.WriteLine("Luku puuttuu. Yritä uudelleen: ");
+            }
+            else
+            {
+                if (GetRightNumber(out inputString, inputString)) //vastaanottaa metodista tyhjän stringin, mikäli input on huono 
+                {
+
+                    break;
+                }
+            }
+        }
+        //10. Otetaan syötetyn luvun kertoma
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\n10. Syötä kokonaisluku: ");
+        while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
+        {
+            inputString = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(inputString)) //whitespace handling
+            {
+                Console.WriteLine("Luku puuttuu. Yritä uudelleen: ");
+            }
+            else
+            {
+                if (FactorialNumber(out inputString, inputString)) //vastaanottaa metodista tyhjän stringin, mikäli input on huono 
+                {
+
                     break;
                 }
             }
         }
 
 
-
+    }
+    static bool FactorialNumber(out string inputString, string numberString)
+    {
+        string answer;
+        if (!int.TryParse(numberString, out int number))
+        {
+            answer = "Vastausta ei voitu käsitellä, yritä uudelleen: ";
+            Console.WriteLine(answer);
+            inputString = "";  //välitä tyhjä string, triggeroidakseen uusi inputin kuuntelu.
+            return false;
+        }
+        else
+        {
+            int[] numbers = new int[number]; //array kokoa syötetty numero
+            numbers[0] = 1;
+            for (int i = 1; i < number;)
+            {
+                numbers[i] = numbers[i - 1] * (i + 1);
+                i++;
+            }
+            Console.WriteLine(numbers[number - 1]);
+            inputString = numberString;
+            return true;
+        }
 
     }
-    static bool SplitSentence(out string inputString, string inputSentence)
+    static bool GetRightNumber(out string inputString, string numberString)
+    {
+        string answer;
+        if (!float.TryParse(numberString, out float number)) //tarkistetaan saadaanko inputista vastaus
+        {
+            answer = "Vastausta ei voitu käsitellä, yritä uudelleen: ";
+            Console.WriteLine(answer);
+            inputString = ""; //välitä tyhjä string, triggeroidakseen uusi inputin kuuntelu.
+            return false;
+        }
+        else
+        {
+            while (number != 10)
+            {
+                if (number < 10)
+                {
+                    answer = "Syötetty numero on liian pieni.";
+                    Console.WriteLine(answer);
+                    inputString = "";
+                    return false;
+                }
+                else if (number > 10)
+                {
+                    answer = "Syötetty numero on liian suuri.";
+                    Console.WriteLine(answer);
+                    inputString = "";
+                    return false;
+                }
+            }
+            inputString = numberString;
+            return true;
+        }
+    }
+
+    static void AlterSentence(string inputString)
+    {
+        string alteredSentence = new CultureInfo("fi-FI", false).TextInfo.ToTitleCase(inputString);
+        Console.WriteLine(alteredSentence);
+    }
+    static int CountWords(int wordCount)
+    {
+        return wordCount;
+    }
+    static bool SplitSentence(out int wordCount, out bool valid, out string inputString, string inputSentence)
     {
         string answer;
         string[] words = inputSentence.Split(" ");
@@ -112,15 +240,20 @@ class Program
             answer = "Lauseessa ei ole sanoja, yritä uudelleen: ";
             Console.WriteLine(answer);
             inputString = "";
+            valid = false;
+            wordCount = 0;
             return false;
         }
         else
         {
-            for (int i = 0; 1 < words.Length; i++)
+            for (int i = 0; i < words.Length;)
             {
-                Console.WriteLine(words[i]);
+                Console.WriteLine(i + 1 + ": " + words[i]);
+                i++;
             }
             inputString = inputSentence;
+            valid = true;
+            wordCount = words.Length;
             return true;
         }
     }
