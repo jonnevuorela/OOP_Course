@@ -11,7 +11,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Harjoitus_1_Jonne_Vuorela")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f22b61ebbb5572e49eeb3c0881f115dd43ec66ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Harjoitus_1_Jonne_Vuorela")]

@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+    start:
         //1. printtaa tiedot
         string name = "Jonne Vuorela";
         string studentTag = "R54T23S";
@@ -143,7 +144,7 @@ class Program
         }
         //10. Otetaan syötetyn luvun kertoma
         Console.WriteLine("\n------------------------------------");
-        Console.WriteLine("\n10. Syötä kokonaisluku: ");
+        Console.WriteLine("\n10. Syötä kokonaisluku, josta otetaan kertoma: ");
         while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
         {
             inputString = Console.ReadLine();
@@ -161,7 +162,136 @@ class Program
             }
         }
 
+        int select;
+        bool inSwitch = true;
+        while (inSwitch)
+        {
+            Console.WriteLine("\n------------------------------------");
+            Console.WriteLine("\n11. Valitse toiminto");
+            Console.WriteLine("0: Ohita valinta.");
+            Console.WriteLine("1: Muunna sanan kirjaimet isoiksi.");
+            Console.WriteLine("2: Muunna sanan kirjaimet pieniksi.");
+            Console.WriteLine("3: Pilko lause sanoiksi.");
 
+            if (int.TryParse(Console.ReadLine(), out select))
+            {
+                switch (select)
+                {
+                    case 0:
+                        {
+                            inSwitch = false;
+                            break;
+                        }
+                    case 1:
+                        {
+                            Console.WriteLine("\n------------------------------------");
+                            Console.WriteLine("\nAnna muunnettava sana, joka muutetaan isoiksi kirjaimiski.");
+                            while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
+                            {
+                                inputString = Console.ReadLine();
+                                if (string.IsNullOrWhiteSpace(inputString)) //whitespace handling
+                                {
+                                    Console.WriteLine("Sana puuttuu. Yritä uudelleen: ");
+                                }
+                                else
+                                {
+                                    UpperString(inputString);
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.WriteLine("\n------------------------------------");
+                            Console.WriteLine("\nAnna muunnettava sana, joka muutetaan pieniksi kirjaimiksi");
+                            while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
+                            {
+                                inputString = Console.ReadLine();
+                                if (string.IsNullOrWhiteSpace(inputString)) //whitespace handling
+                                {
+                                    Console.WriteLine("Sana puuttuu. Yritä uudelleen: ");
+                                }
+                                else
+                                {
+                                    LowerString(inputString);
+                                    break;
+                                }
+                            }
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("\n------------------------------------");
+                            Console.WriteLine("\nKirjoita lause: ");
+                            while (true) // pyörittää looppia niin kauvan, että saadaan käypä input
+                            {
+                                inputString = Console.ReadLine();
+                                if (string.IsNullOrWhiteSpace(inputString)) //whitespace handling
+                                {
+                                    Console.WriteLine("Lause puuttuu. Yritä uudelleen: ");
+                                }
+                                else
+                                {
+                                    if (SplitSentence(out wordCount, out valid, out inputString, inputString))
+                                    //wordCount antaa vastauksen kohtaan 7.
+                                    //valid muuttuja oikeuttaa etenemisen kohtaan 7. ja 8.
+                                    //vastaanottaa metodista tyhjän stringin(inputString), mikäli input on huono
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+                            break;
+                        }
+
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("Syöttö ei kelpaa. Yritä uudelleen.");
+                select = int.Parse(Console.ReadLine());
+            }
+        }
+
+        LotteryNumbers();
+
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\nPalataanko alkuun? y/n");
+        string restart;
+        do
+        {
+            restart = Console.ReadLine();
+        }
+        while (restart != "y" && restart != "n" && restart != "Y" && restart != "N");
+        if (restart == "y" || restart == "Y")
+        { goto start; }
+        else
+        {
+            Console.WriteLine("Ohjelma sulkeutuu...");
+        }
+    }
+    static void LotteryNumbers()
+    {
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("\nExtra. Lottonumerot ovat: ");
+        int[] numbers = new int[7];
+        for (int number = 0; number <= 6; number++)
+        {
+            int pick;
+            do
+            {
+                pick = new Random().Next(0, 101);//valitaan random numero eri muuttujalle ennen listaan lisöystä
+            }
+            while (numbers.Contains(pick)); // 🔄valitsee uuden numeron jos numero löytyy listasta.
+            numbers[number] = pick; // lisätään satunnaisesti valittu lottonumero listaan
+        }
+        foreach (int index in numbers)//tulostetaan jokainen listan numero
+        {
+            Console.Write($"{index}" + " ");
+        }
     }
     static bool FactorialNumber(out string inputString, string numberString)
     {
@@ -182,6 +312,7 @@ class Program
                 numbers[i] = numbers[i - 1] * (i + 1);
                 i++;
             }
+            Console.WriteLine("Luvun " + number + " kertoma on: ");
             Console.WriteLine(numbers[number - 1]);
             inputString = numberString;
             return true;
