@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Harjoitus_1_Jonne_Vuorela")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b271b202c79787ff2d4017a5eaca2a0ffae13b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09213115c395c505aac01d758f64c0244b891b38")]
 [assembly: System.Reflection.AssemblyProductAttribute("Harjoitus_1_Jonne_Vuorela")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Harjoitus_1_Jonne_Vuorela")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
