@@ -1,0 +1,15 @@
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.AssemblyInfoInputs.cache
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.AssemblyInfo.cs
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.csproj.CoreCompileInputs.cache
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.sourcelink.json
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/bin/Debug/net8.0/Tuntiharjoitus
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/bin/Debug/net8.0/Tuntiharjoitus.deps.json
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/bin/Debug/net8.0/Tuntiharjoitus.runtimeconfig.json
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/bin/Debug/net8.0/Tuntiharjoitus.dll
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/bin/Debug/net8.0/Tuntiharjoitus.pdb
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.dll
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/refint/Tuntiharjoitus.dll
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.pdb
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/Tuntiharjoitus.genruntimeconfig.cache
+/Users/jonne/repos/OOP_Course/Tuntiharjoitus/obj/Debug/net8.0/ref/Tuntiharjoitus.dll

@@ -136,7 +136,6 @@
 
       }
 
-
       //Metodi toistuvalle syötön tarkistukselle
       static int AskInt()
       {
