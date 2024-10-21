@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Tuntiharjoitus3/1.0.0": {
+        "runtime": {
+          "Tuntiharjoitus3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tuntiharjoitus3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

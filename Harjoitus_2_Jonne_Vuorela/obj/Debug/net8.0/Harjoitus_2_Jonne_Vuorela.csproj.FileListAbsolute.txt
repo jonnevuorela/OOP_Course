@@ -1,0 +1,15 @@
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_2_Jonne_Vuorela
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.deps.json
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.runtimeconfig.json
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.dll
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/bin/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.pdb
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.AssemblyInfoInputs.cache
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.AssemblyInfo.cs
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.csproj.CoreCompileInputs.cache
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.sourcelink.json
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.dll
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/refint/Harjoitus_2_Jonne_Vuorela.dll
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.pdb
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/Harjoitus_2_Jonne_Vuorela.genruntimeconfig.cache
+/Users/jonne/repos/OOP_Course/Harjoitus_2_Jonne_Vuorela/obj/Debug/net8.0/ref/Harjoitus_2_Jonne_Vuorela.dll

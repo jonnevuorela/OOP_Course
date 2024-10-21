@@ -3,12 +3,6 @@
    private static void Main(string[] args)
    {
       var library = new Library();
-      Book book = new Book("kiikaa", "k.k.Kiika", 100);
-      var book1 = new Book("kookoo", "j.j.joojoo", 200);
-      Console.WriteLine($"book name {book.Name}");
-      Console.WriteLine($"book1 name {book1.Name}");
-      library.Books.Add(book);
-      library.Books.Add(book1);
       bool valid;
    start:
       int select = 0;
@@ -24,13 +18,7 @@
             case 0:
                goto end;
             case 1:
-               var r = NewBook(library.Books);
-               if (r != null)
-               {
-                  var newBook = new Book(r.Item1, r.Item2, r.Item3);
-                  Console.WriteLine($"r.1 {r.Item1} r.2 {r.Item2} r.3{r.Item3}");
-                  Console.WriteLine($"main name {newBook.Name} writer {newBook.Writer} isbn {newBook.Isbn}");
-               }
+               library.Add(NewBook(library.Books));
                goto start;
             case 2:
                library.Remove(Int32.Parse(Console.ReadLine()));
@@ -45,7 +33,9 @@
    end:;
    }
 
-   static Tuple<string, string, int> NewBook(List<Book> books)
+   // Metodi joka kysyy tiedot uudelle kirjalle,
+   // mikäli isbn on uniikki, metodi palauttaa uuden kirjan
+   static Book NewBook(List<Book> books)
    {
       Console.WriteLine("\nEnter name of the book.");
       string nName = Console.ReadLine();
@@ -61,10 +51,16 @@
          Console.WriteLine("The book already exists.");
          return null;
       }
-      Console.WriteLine("Book was returned from mehtod");
-      return Tuple.Create(nName, nWriter, nIsbn);
+      else
+      {
+         var newBook = new Book(nName, nWriter, nIsbn);
+         return newBook;
+
+      }
    }
 
+   // Metodissa tarkastetaan, onko käyttäjän syöttämä valinta käypä.
+   // palauttaa true vain jos valinta on välillä 0-3
    static bool AskValidSelection(out int select)
    {
       Console.WriteLine("⌈‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾⌉");
@@ -101,7 +97,13 @@
 
 public class Library
 {
-   private List<Book> books = new List<Book>();
+   private List<Book> books;
+
+   public Library()
+   {
+      this.books = new List<Book>();
+   }
+
    public List<Book> Books { get => books; }
 
    public void Add(Book book)
@@ -141,13 +143,31 @@ public class Library
 public class Book
 {
    private string name;
-   public string Name { get; set; }
+   public string Name
+   {
+      get
+      {
+         return name;
+      }
+   }
 
    private string writer;
-   public string Writer { get; set; }
+   public string Writer
+   {
+      get
+      {
+         return writer;
+      }
+   }
 
    private int isbn;
-   public int Isbn { get; set; }
+   public int Isbn
+   {
+      get
+      {
+         return isbn;
+      }
+   }
 
    public Book(string name, string writer, int isbn)
    {
